@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>M_Button.qml</file>
+        <file>M_Map.qml</file>
+        <file>M_Rect.qml</file>
+        <file>M_Shadow.qml</file>
+        <file>M_Text.qml</file>
+        <file>main.qml</file>
+        <file>images/darkLightToggle.png</file>
+        <file>images/FirestormArrowWhiteLeft.png</file>
+        <file>images/mapMarker.png</file>
+    </qresource>
+</RCC>
