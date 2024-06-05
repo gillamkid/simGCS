@@ -39,12 +39,12 @@ void TelemetrySimulator::update(){
             // ascend and switch to HOLD if desired altitude reached
             set_speed_mps(10);
             set_location({m_location.latitude(), m_location.longitude(), m_location.altitude() + (m_speed_mps / UPDATE_FREQ_HZ)});
-            if(m_location.altitude() >= 10)
+            if(m_location.altitude() >= 25)
                 set_flightMode(FlightMode::HOLD);
             break;
         case FlightMode::GOTO:
             // move towards GOTO target and switch to HOLD if reached
-            set_speed_mps(50);
+            set_speed_mps(30);
             set_heading_deg(m_location.azimuthTo(m_goToTarget));
             set_location(m_location.atDistanceAndAzimuth(m_speed_mps / UPDATE_FREQ_HZ, m_heading_deg));
             if(m_location.distanceTo(m_goToTarget) < 5)
@@ -56,7 +56,7 @@ void TelemetrySimulator::update(){
             set_location({m_location.latitude(), m_location.longitude(), m_location.altitude() - (m_speed_mps / UPDATE_FREQ_HZ)});
             if(m_location.altitude() <= 0)
                 set_flightMode(FlightMode::GROUND);
-        break;
+            break;
         default:
             exit(1); // unknown flight mode, should never happen
     }

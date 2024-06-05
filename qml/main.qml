@@ -259,17 +259,18 @@ Window {
 
         M_Text {
             text: keyText
-            font.pointSize: 12
+            font.pointSize: valTxt.font.pointSize * .7
             opacity: 0.5
         }
         Row {
             M_Text { 
+                id: valTxt
                 text: valueText 
             }
             M_Text { 
                 text: suffixText 
-                y: floorSuffixWithVal ? 3 : 0
-                font.pointSize: 12
+                y: floorSuffixWithVal ? valTxt.font.pixelSize - font.pixelSize : 0
+                font.pointSize: valTxt.font.pointSize * .7
             }
         }
     }
