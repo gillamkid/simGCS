@@ -34,7 +34,14 @@ Use the latest Qt-Online-installer to get Qt 5.15.17. Install Qt Creator along w
 
 Follow the instuction given in this [video](https://doc.qt.io/qt-6/android-getting-started.html) to install the Android SDK using the Qt Creator GUI. Here are some notes to help along if you have troubles.
 
-    After installing Android SDK to the default ~/Android/SDK location, my SDK folder install had the following
+    a difference from the video: 
+    - after clicking the "SDK manager Button", select the following in addition to what the video saye
+        - Android 12.0 ("S")
+            - sdk manager
+            - google play intel x86_64 atom system image
+- 
+    After installing Android SDK to the default ~/Android/SDK 
+    location, my SDK folder install had the following:
 
     sdk version 13
     - "platforms;android-31"
@@ -49,6 +56,7 @@ Follow the instuction given in this [video](https://doc.qt.io/qt-6/android-getti
       - name "AndroidEmulator"
       - "Phone" "Galaxy Nexus"
       - "x86_64"
+      - android 31
     Also make sure your build step is using x86_64
       - project -> build step -> details -> ABIs -> x86_64
 
