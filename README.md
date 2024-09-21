@@ -24,7 +24,7 @@ sudo apt update
 sudo apt upgrade -y
 
 # note: version of openjdk seems picky. v11 and v21 didn't work, but v17 did
-sudo apt install -y libxcb-cursor0 git vim libxcb-xinerama0 libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386 libsdl1.2debian:i386 build-essential libgl1-mesa-dev openjdk-17-jdk
+sudo apt install -y libxcb-cursor0 git vim libxcb-xinerama0 libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386 build-essential libgl1-mesa-dev openjdk-17-jdk
 ```
 
 ##### Install Qt 5.15.17
@@ -67,6 +67,7 @@ Open Qt Creator and select `File` -> `Open File of Project` -> `CMakeLists.txt` 
 Next to the big play button select `Android` -> `simGCS` (sometimes it selects `""` instead of `"simGCS"` on first start)
 
 Run using the Play button (not the Debug play button, i didn't do the setup to get that working)
+* Note: Android is built with the Debug Cmake configuration to avoid having to deal with apk signing (Release config requires that), but the debug play button does not work, only the non-debug play button.
 
 ## Run Linux app and Linux Unit tests
 
